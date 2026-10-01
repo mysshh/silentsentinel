@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[node name="LandingValley" type="Node3D"]
+
+[node name="Rocks" type="Node3D" parent="."]
+
+[node name="Cliffs" type="Node3D" parent="."]
+

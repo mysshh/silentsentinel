@@ -1,0 +1,97 @@
+﻿[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/HUDController.gd" id="1_controller"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obj"]
+bg_color = Color(0.02, 0.04, 0.05, 0.55)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.7, 0.75, 0.35)
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+
+[node name="HUD" type="CanvasLayer" groups=["HUD"]]
+script = ExtResource("1_controller")
+
+[node name="ThreatOverlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.35, 0.02, 0.04, 1)
+modulate = Color(1, 1, 1, 0)
+
+[node name="ObjectiveLabel" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.78, 0.95, 0.98, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_obj")
+text = "OBJECTIVE: Restore Pod Power"
+
+[node name="StatusLabel" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -48.0
+offset_right = -20.0
+offset_bottom = -16.0
+theme_override_colors/font_color = Color(0.72, 0.88, 0.82, 1)
+theme_override_font_sizes/font_size = 14
+text = "O2 100%   E 100%   T 20C   H 100%"
+horizontal_alignment = 2
+
+[node name="InteractionPrompt" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = 48.0
+offset_right = 140.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.9, 0.95, 0.85, 1)
+theme_override_font_sizes/font_size = 16
+text = "[ E ] INTERACT"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 88.0
+offset_right = 280.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0.85, 0.95, 0.7, 1)
+theme_override_font_sizes/font_size = 16
+text = "Message"
+horizontal_alignment = 1
+
+[node name="ThreatLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -86.0
+offset_right = 220.0
+offset_bottom = -54.0
+theme_override_colors/font_color = Color(0.95, 0.55, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "IT NOTICED YOU"
+horizontal_alignment = 1
