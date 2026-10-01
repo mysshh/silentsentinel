@@ -1,0 +1,10 @@
+res://scripts/PlayerController.gd
+res://scripts/alien/AlienCreature.gd
+res://scripts/alien/AlienDetectionComponent.gd
+res://scripts/systems/SoundEventSystem.gd
+res://scripts/debug/RuntimeAuditOverlay.gd
+res://scripts/HUDController.gd
+res://scripts/progression/Day4Controller.gd
+res://scripts/scanner/ScannerComponent.gd
+res://scripts/environment/ReactivePlant.gd
+res://scripts/LandingSequence.gd
